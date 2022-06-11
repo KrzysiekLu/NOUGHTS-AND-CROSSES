@@ -21,16 +21,17 @@ const init = () => {
     player1 = true;
     player2 = false;
     gamea = true;
-    moves = ["", "", "", "", "", "", "", "", ""];
+
     document
       .querySelectorAll(".board__field")
       .forEach((el) => (el.textContent = ""));
     console.log("ooo");
   };
   const endGame = () => {
-    game.removeEventListener("click", ccc);
-    gamea = !gamea;
-    console.log("ooo");
+    game.removeEventListener("click", fillField);
+    document.querySelectorAll(".board__field").forEach((el) => {
+      el.classList.remove("hover-effect");
+    });
   };
 
   const checkWin = () => {
@@ -76,9 +77,7 @@ const init = () => {
     }
   };
 
-  const ccc = game.addEventListener("click", (e) => {
-    fillField(e);
-  });
+  game.addEventListener("click", fillField);
   document.querySelector(".reset").addEventListener("click", resetGame);
 };
 

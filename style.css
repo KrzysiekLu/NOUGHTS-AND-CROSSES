@@ -77,7 +77,7 @@ body {
   cursor: pointer;
 }
 
-.board__field:hover {
+.board .hover-effect:hover {
   -webkit-box-shadow: 0 0 20px 5px black;
           box-shadow: 0 0 20px 5px black;
 }
