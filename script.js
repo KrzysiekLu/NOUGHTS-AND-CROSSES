@@ -22,10 +22,11 @@ const init = () => {
     player2 = false;
     gamea = true;
 
-    document
-      .querySelectorAll(".board__field")
-      .forEach((el) => (el.textContent = ""));
-    console.log("ooo");
+    document.querySelectorAll(".board__field").forEach((el) => {
+      el.textContent = "";
+      el.classList.add("hover-effect");
+      game.addEventListener("click", fillField);
+    });
   };
   const endGame = () => {
     game.removeEventListener("click", fillField);
