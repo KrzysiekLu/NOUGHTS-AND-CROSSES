@@ -14,7 +14,7 @@ body {
   font-family: "Roboto Slab", serif;
 }
 .game__info {
-  width: 600px;
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -29,15 +29,15 @@ body {
 
 .board {
   padding: 10px;
-  min-width: 600px;
-  min-height: 600px;
+  min-width: 300px;
+  min-height: 300px;
   border: 10px solid black;
   display: inline-grid;
   grid-template-columns: repeat(3, 1fr);
   font-size: 3rem;
 
   &__field {
-    height: 200px;
+    height: 100px;
     border: rgb(47, 47, 47) solid;
     position: relative;
     display: flex;
