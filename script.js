@@ -1,4 +1,5 @@
 const init = () => {
+  const winnerInfo = document.querySelector(".winner");
   const game = document.querySelector(".board");
   document.querySelector(".player1").classList.add("active");
   let player1 = true;
@@ -20,7 +21,7 @@ const init = () => {
     moves = ["", "", "", "", "", "", "", "", ""];
     player1 = true;
     player2 = false;
-    gamea = true;
+    game = true;
 
     document.querySelectorAll(".board__field").forEach((el) => {
       el.textContent = "";
@@ -33,6 +34,10 @@ const init = () => {
     document.querySelectorAll(".board__field").forEach((el) => {
       el.classList.remove("hover-effect");
     });
+    console.log(sign == "X");
+    sign === "X"
+      ? (winnerInfo.textContent = "Player 1")
+      : (winnerInfo.textContent = "Player 2");
   };
 
   const checkWin = () => {
@@ -60,10 +65,10 @@ const init = () => {
   };
 
   const fillField = (e) => {
-    if (gamea) {
+    if (game) {
       if (
         !e.target.className.includes("board__field") ||
-        e.target.textContent != ""
+        !e.target.textContent == ""
       )
         return;
 
