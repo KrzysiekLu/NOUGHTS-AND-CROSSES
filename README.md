@@ -6,4 +6,4 @@
 
 ### Links
 
-- Live Site URL: [Live site]https://noughts-and-crosses-kl.netlify.app/)
+- Live Site URL: [Live site](https://noughts-and-crosses-kl.netlify.app/)
