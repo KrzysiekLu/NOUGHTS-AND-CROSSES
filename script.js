@@ -4,7 +4,7 @@ const init = () => {
   document.querySelector(".player1").classList.add("active");
   let player1 = true;
   let player2 = false;
-  let gamea = true;
+  let gameplay = true;
   let moves = ["", "", "", "", "", "", "", "", ""];
 
   const winCobbination = [
@@ -21,7 +21,7 @@ const init = () => {
     moves = ["", "", "", "", "", "", "", "", ""];
     player1 = true;
     player2 = false;
-    game = true;
+    gameplay = true;
 
     document.querySelectorAll(".board__field").forEach((el) => {
       el.textContent = "";
@@ -57,7 +57,6 @@ const init = () => {
     player1
       ? (moves[e.target.dataset.cell] = "x")
       : (moves[e.target.dataset.cell] = "o");
-    console.log(moves);
   };
 
   const chooseSign = () => {
